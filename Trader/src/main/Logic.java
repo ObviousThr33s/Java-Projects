@@ -3,21 +3,50 @@ package main;
 import java.util.Scanner;
 
 public class Logic {
-	public void Run() {
+	
+	boolean running;
+	
+	public void Run() throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		Command cmd = new Command(scanner);
-		Loop(cmd, scanner);
+		running = true;
+		Loop(cmd);
 	}
 	
-	public void Loop(Command cmd, Scanner scanner) {
+	public void Stop(Command cmd) {
+		cmd.Stop();
+	}
+	
+	public void Loop(Command cmd) throws Exception {
 		//Run game calculations and draw them to the screen
 		
+<<<<<<< HEAD
 		while (true) {
 			cmd.Input();
 			System.out.println(cmd.GetData());
 			break;
 		}
 		
+=======
+		int c = 0;
+		cmd.SetData("");
+		
+		while (running) {
+			if (running) {
+				cmd.Input();
+				cmd.Output(cmd.GetData());
+				cmd.Output(Integer.toString(c));
+				c++;
+			}
+			else if (cmd.GetData().toLowerCase() == "Stop".toLowerCase()) {
+				break;
+			}else {
+				throw new Exception("Error: You Broke Something");
+			}
+		}
+		
+		Stop(cmd);
+>>>>>>> abe2dc490d3d2da959cace424ac9dac415022c2f
 	}
 	
 	public void Sell() {

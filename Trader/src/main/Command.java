@@ -13,9 +13,11 @@ public class Command {
 	
 	public void Input() {
 		//Get input from user and format it as a string
-		//Scanner input = new Scanner(System.in);
 		data = input.nextLine();
-		input.close();
+	}
+	
+	public void Output(String data) {
+		System.out.println(data);
 	}
 	
 	public void Parse() {
@@ -24,5 +26,13 @@ public class Command {
 	
 	public String GetData() {
 		return data;
+	}
+	
+	public void SetData(String set) {
+		data = set;
+	}
+
+	public void Stop() {
+		input.close();
 	}
 }
