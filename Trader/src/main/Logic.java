@@ -20,14 +20,6 @@ public class Logic {
 	public void Loop(Command cmd) throws Exception {
 		//Run game calculations and draw them to the screen
 		
-<<<<<<< HEAD
-		while (true) {
-			cmd.Input();
-			System.out.println(cmd.GetData());
-			break;
-		}
-		
-=======
 		int c = 0;
 		cmd.SetData("");
 		
@@ -46,7 +38,6 @@ public class Logic {
 		}
 		
 		Stop(cmd);
->>>>>>> abe2dc490d3d2da959cace424ac9dac415022c2f
 	}
 	
 	public void Sell() {
