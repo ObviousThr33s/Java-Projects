@@ -11,15 +11,18 @@ public class Logic {
 	
 	public void Loop(Command cmd, Scanner scanner) {
 		//Run game calculations and draw them to the screen
+		
 		while (true) {
 			cmd.Input();
 			System.out.println(cmd.GetData());
 			break;
 		}
+		
 	}
 	
 	public void Sell() {
 		//Sell mechanic for selling raw resources and produced goods
+		
 	}
 	
 	public void Buy() {
